@@ -1,6 +1,5 @@
 import 'package:flutter_tts/flutter_tts.dart';
 
-/// Audiodescrição em voz alta (pt-BR).
 class TtsService {
   final FlutterTts _tts = FlutterTts();
   bool _speaking = false;

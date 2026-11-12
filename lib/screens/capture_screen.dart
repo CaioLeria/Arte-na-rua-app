@@ -25,6 +25,7 @@ class _CaptureScreenState extends State<CaptureScreen> {
       final picked = await picker.pickImage(
         source: source,
         maxWidth: 1024,
+        maxHeight: 1024,
         imageQuality: 80,
       );
       if (picked == null || !mounted) return;

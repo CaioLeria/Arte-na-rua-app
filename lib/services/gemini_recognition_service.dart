@@ -12,7 +12,7 @@ class GeminiRecognitionService implements RecognitionService {
   static const String baseUrl =
       'https://generativelanguage.googleapis.com/v1';
   static const String apiKey = String.fromEnvironment('GEMINI_API_KEY');
-  static const String model = 'gemini-3.8-flash';
+  static const String model = 'gemini-3.5-flash-lite';
 
   final http.Client client;
   final Duration timeout;
