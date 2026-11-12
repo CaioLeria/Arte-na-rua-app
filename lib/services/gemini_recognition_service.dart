@@ -10,9 +10,9 @@ import 'recognition_service.dart';
 
 class GeminiRecognitionService implements RecognitionService {
   static const String baseUrl =
-      'https://generativelanguage.googleapis.com/v1beta';
+      'https://generativelanguage.googleapis.com/v1';
   static const String apiKey = String.fromEnvironment('GEMINI_API_KEY');
-  static const String model = 'gemini-1.5-flash';
+  static const String model = 'gemini-3.8-flash';
 
   final http.Client client;
   final Duration timeout;

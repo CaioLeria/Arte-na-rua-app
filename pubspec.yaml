@@ -37,6 +37,7 @@ dependencies:
   flutter_tts: ^4.2.5
   image_picker: ^1.2.4
   geolocator: ^14.1.2
+  google_maps_flutter: ^2.18.1
 
 dev_dependencies:
   flutter_test:
