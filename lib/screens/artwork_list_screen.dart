@@ -35,7 +35,7 @@ class ArtworkListScreen extends StatefulWidget {
   final FavoritesService? favoritesService;
   final LocationService? locationService;
 
-  /// Permite trocar o mapa (ex.: nos testes, onde não há mapa nativo).
+  
   final MapBuilder? mapBuilder;
 
   const ArtworkListScreen({
@@ -67,12 +67,15 @@ class _ArtworkListScreenState extends State<ArtworkListScreen> {
   LoadState state = LoadState.initial;
   String errorMessage = '';
 
-  // Localização: a posição só existe em memória, nunca é salva.
+  
   LocationStatus locationStatus = LocationStatus.initial;
   String? locationMessage;
   UserPosition? position;
   List<ArtworkDistance> nearby = [];
   bool nearbyActive = false;
+
+
+  static const bool mapEnabled = false;
   bool showMap = false;
 
   @override
@@ -107,7 +110,6 @@ class _ArtworkListScreenState extends State<ArtworkListScreen> {
     }
   }
 
-  /// Obras curadas primeiro, mantendo a ordem original dentro de cada grupo.
   List<Artwork> curatedFirst(List<Artwork> list) {
     return [
       ...list.where((a) => a.isCurated),
@@ -318,17 +320,19 @@ class _ArtworkListScreenState extends State<ArtworkListScreen> {
                     ? null
                     : toggleNearby,
               ),
-              const Spacer(),
-              SegmentedButton<bool>(
-                showSelectedIcon: false,
-                segments: const [
-                  ButtonSegment(value: false, label: Text('Lista')),
-                  ButtonSegment(value: true, label: Text('Mapa')),
-                ],
-                selected: {showMap},
-                onSelectionChanged: (value) =>
-                    setState(() => showMap = value.first),
-              ),
+              if (mapEnabled) ...[
+                const Spacer(),
+                SegmentedButton<bool>(
+                  showSelectedIcon: false,
+                  segments: const [
+                    ButtonSegment(value: false, label: Text('Lista')),
+                    ButtonSegment(value: true, label: Text('Mapa')),
+                  ],
+                  selected: {showMap},
+                  onSelectionChanged: (value) =>
+                      setState(() => showMap = value.first),
+                ),
+              ],
             ],
           ),
         ),
@@ -339,18 +343,18 @@ class _ArtworkListScreenState extends State<ArtworkListScreen> {
           onOpenSettings: locationService.openSettings,
         ),
         Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: TextButton.icon(
-                onPressed: openCapture,
-                icon: const Icon(Icons.photo_camera),
-                label: const Text('Reconhecer por foto'),
-              ),
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: TextButton.icon(
+              onPressed: openCapture,
+              icon: const Icon(Icons.photo_camera),
+              label: const Text('Reconhecer por foto'),
             ),
           ),
+        ),
         Expanded(child: buildBody()),
-        // O mapa do Google já traz o logo; fora dele a atribuição é nossa.
+      
         if (!showMap) const GoogleAttribution(),
       ],
     );

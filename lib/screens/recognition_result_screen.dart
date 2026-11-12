@@ -153,10 +153,7 @@ class _RecognitionResultScreenState extends State<RecognitionResultScreen> {
               else
                 const AiNotice(),
               const SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () => openDetail(result!.placeId!),
-                child: const Text('Ver ficha'),
-              ),
+        
             ],
           ),
         );
