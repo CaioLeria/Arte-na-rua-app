@@ -99,16 +99,7 @@ O estado de carregamento de cada tela usa o enum `LoadState` (inicial, carregand
 
 Pré-requisito:  **Flutter 3.47.9**  com `sdk: ^3.13.7`.
 
-1. Crie o arquivo `env.json` na raiz do projeto (ele **não** deve ir para o Git):
-
-```json
-{
-  "PLACES_API_KEY": "sua-chave-da-places",
-  "GEMINI_API_KEY": "sua-chave-do-gemini"
-}
-```
-
-2. Rode:
+1. Rode:
 
 caso seja necessário
 
