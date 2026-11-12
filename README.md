@@ -11,6 +11,10 @@ Projeto da **Global Solution 2026.2**, disciplina Cross Platform (Flutter), 3SI 
 | Caio Vinicius Magalhães Leria | RM: 557833 |
 | Cesar Alves Brasil | RM: 556236 |
 
+## Link do repositório
+
+https://github.com/CaioLeria/Arte-na-rua-app
+
 ## Tema da Global Solution
 
 **CitizenTech**: O ArteNaRua aproxima as pessoas da arte urbana da cidade e inclui quem tem baixa visão com a audiodescrição de cada obra.
@@ -96,6 +100,8 @@ O estado de carregamento de cada tela usa o enum `LoadState` (inicial, carregand
 - A descrição escrita pela IA pode conter erros.
 
 ## Como rodar
+
+As chaves das apis estão no projeto .zip
 
 Pré-requisito:  **Flutter 3.47.9**  com `sdk: ^3.13.7`.
 
