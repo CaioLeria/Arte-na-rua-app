@@ -48,14 +48,18 @@ Favoritos ─ toca numa obra ─▶ Detalhe
 ## Prints das telas
 
 
-(docs/prints/about_page.jpeg) 
-(docs/prints/detail_page.jpeg) 
-(docs/prints/fav_page.jpeg) 
-(docs/prints/gemini_response.jpeg) 
-(docs/prints/list_page.jpeg) 
-(docs/prints/splash_1.jpeg) 
-(docs/prints/splash_2.jpeg) 
-(docs/prints/splash_3.jpeg)
+| Splash / introdução 1 | Introdução 2 | Introdução 3 |
+|---|---|---|
+| <img src="docs/prints/splash_1.jpeg" width="240" alt="Tela inicial 1"> | <img src="docs/prints/splash_2.jpeg" width="240" alt="Tela inicial 2"> | <img src="docs/prints/splash_3.jpeg" width="240" alt="Tela inicial 3"> |
+
+| Lista de obras | Detalhe da obra | Favoritos |
+|---|---|---|
+| <img src="docs/prints/list_page.jpeg" width="240" alt="Lista de obras"> | <img src="docs/prints/detail_page.jpeg" width="240" alt="Detalhe da obra"> | <img src="docs/prints/fav_page.jpeg" width="240" alt="Favoritos"> |
+
+| Resposta do Gemini | Sobre |
+|---|---|
+| <img src="docs/prints/gemini_response.jpeg" width="240" alt="Reconhecimento por foto com Gemini"> | <img src="docs/prints/about_page.jpeg" width="240" alt="Tela Sobre"> |
+
 
 
 ## API utilizada
