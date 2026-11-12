@@ -110,10 +110,13 @@ Pré-requisito:  **Flutter 3.47.9**  com `sdk: ^3.13.7`.
 
 2. Rode:
 
-caso não seja necessário, não faça o flutter upgrade
+caso seja necessário
 
 ```bash
-flutter upgrade 
+flutter upgrade
+```
+
+```bash
 flutter pub get
 flutter run -d chrome --dart-define-from-file=env.json
 ```
